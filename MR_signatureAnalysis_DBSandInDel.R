@@ -21,15 +21,15 @@ library("dplyr")
 library("openxlsx")
 
 # Load custom functions
-FUNCTIONS_SCRIPT <- list.files(path = "/Users/m.m.kleisman/Projects/git/pmc_kuiper_projects/", 
+FUNCTIONS_SCRIPT <- list.files(path = "/path/to/code/dir/", 
                                pattern = "createdFunctions_HM-ALL.R",
                                full.names = TRUE, recursive = TRUE)
 source(FUNCTIONS_SCRIPT)
 
 # Set global parameters
 # All input files should be located somewhere in PROJECT_DIR
-PROJECT_DIR <- "/Users/m.m.kleisman/Projects/HypermutatedALL_project/"
-RESULTS_DIR <- paste0(PROJECT_DIR, "RESULTS/multipleRelapse/DBS_InDel/")
+PROJECT_DIR <- "/path/to/project/dir/"
+RESULTS_DIR <- paste0(PROJECT_DIR, "/path/to/result/dir/")
 RANDOM_ID_INFO <- "MR_cohortDescription.xlsx"
 CENTROMERES_FILE <- "cytoBand.hg38.centromeresOnly.txt"
 MNP_EXT <- "-merged-mutect2Calls.passFiltered.mnp.vepAnnotated.germlinefiltered.vcf.gz"
