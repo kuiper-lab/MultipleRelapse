@@ -6,16 +6,16 @@ SCHEDULER="SLURM"
 ###PARAMETERS
 SAMPLE="MRsamples_refcohort_17032024_8signatures"
 
-LIBRARY_LOCATION="/hpc/local/Rocky8/pmc_kuiper/software/R_libs/4.1.2/"
-MUT_MAT_LOCATION="/hpc/pmc_kuiper/HypermutatedALL_project/DATA/deNovoExtraction/combined_mut_mat_MRsamples_refcohort_05032024.rdata"
+LIBRARY_LOCATION="/path/to/software/R_libs/4.1.2/"
+MUT_MAT_LOCATION="/path/to/input_mutation_matrix.rdata"
 PERFORM_ESTIMATE=FALSE
-ESTIMATE_LOCATION="/hpc/pmc_kuiper/HypermutatedALL_project/RESULTS/denovoextraction/estimate${SAMPLE}.pdf"
+ESTIMATE_LOCATION="/path/to/output/dir/estimate${SAMPLE}.pdf"
 PERFORM_NMF=TRUE
-NMF_LOCATION="/hpc/pmc_kuiper/HypermutatedALL_project/RESULTS/denovoextraction/nmf_res_${SAMPLE}.rdata"
+NMF_LOCATION="/path/to/output/dir/nmf_res_${SAMPLE}.rdata"
 NUMBER_SIGNATURES=8
 
-R_CODE="/hpc/pmc_kuiper/HypermutatedALL_project/CODE/denovoextraction/denovoextraction.R"
-JOB_DIR="/hpc/pmc_kuiper/HypermutatedALL_project/CODE/jobs/denovoextraction/${SAMPLE}/"
+R_CODE="/path/to/denovoextraction.R"
+JOB_DIR="/path/to/job/dir/"
 mkdir -p ${JOB_DIR}
 
 echo -e "Creating job for De Novo Extraction"
