@@ -1468,7 +1468,7 @@ for (i in 1:length(filtered_variants_clusters_df_list)){
 snv_info <- as.data.frame(read_excel("2023_07_13_Overview of SNV signature probabilities.xlsx")[,c(1:35)])
 
 # Rescale the contribution to [0,1] for each extracted signature
-scaled_contributions <- reshape2::melt(fit_res_strict_final$contribution)
+scaled_contributions <- reshape2::melt(absolute_contributions)
 colnames(scaled_contributions) = c("Signature", "Sample", "Contribution")
 samples <- unique(scaled_contributions$Sample)
 scaled_contributions$Relative_contribution <- NA
@@ -1581,7 +1581,6 @@ for (i in 1:nrow(snv_info)){
   }
   # Get mutation probabilities for the mutation context and add to data frame
   mut_context_probabilities <- sample_cluster_probabilities[mut_context_96,, drop = F]
-  print(sum(mut_context_probabilities))
   snv_line_compl <- cbind(snv_line, 
                           data.frame(trinucleotide_context = mut_context,
                                      trinucleotide_mutation = mut_context_96),
@@ -1589,10 +1588,8 @@ for (i in 1:nrow(snv_info)){
   probability_df <- rbind(probability_df, snv_line_compl)
   
 }
-
-probability_df["Unassigned"] <- 1 - round(rowSums(probability_df[,c(38:47)]), digits = 6)
 openxlsx::write.xlsx(probability_df, 
-                     file = "20240423_Overview_SNV_signature_probabilities_bootstrapCorrectedSignaturesMovedToUnassigned.xlsx")
+                     file = "20240423_Overview_SNV_signature_probabilities.xlsx")
 
 
 
