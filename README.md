@@ -7,7 +7,7 @@ This repository contains scripts used for data analyses and visualizations in th
 Data analyses are conducted in Bash v4.4.20 and R v4.1.2.
 
 #### MR_signatureAnalysis_SBS.R
-Script used for SBS signature analysis. Filter and cluster WGS mutations and generate a mutation matrix for de novo signature extraction. Visualise allele frequencies, mutation profiles and signature contributions. Additionally, the a posteriori probability of a SNV being caused by the identified mutational signatures were calculated for each trinucleotide context of selected SNVs.
+Script used for SBS signature analysis. Filter and cluster WGS mutations and generate a mutation matrix for de novo signature extraction. Visualise allele frequencies, mutation profiles and signature contributions. Additionally, the a posteriori probability of a SNV being caused by the identified mutational signatures were calculated for each trinucleotide context of selected SNVs.   
 <br/>  
 
 #### MR_signatureAnalysis_DBSandInDel.R 
