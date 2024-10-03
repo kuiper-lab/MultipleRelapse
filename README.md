@@ -1,6 +1,6 @@
 # Multiple Relapse Study
 
-This repository contains scripts used for data analyses and visualizations in the Mutational Mechanisms In Multiply Relapsed Pediatric Acute Lymphoblastic Leukemia study. More information about the study can be found in the [manuscript] (hyperlink follows)
+This repository contains scripts used for data analyses and visualizations in the Mutational Mechanisms In Multiply Relapsed Pediatric Acute Lymphoblastic Leukemia study. More information about the study can be found in the [manuscript](https://www.nature.com/articles/s41375-024-02403-7).
 
 ## Scripts
 
